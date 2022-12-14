@@ -8,18 +8,18 @@ function solution(keyinput, board) {
         if(el === 'right') answer[0] += 1;
         if(el === 'up') answer[1] += 1;
         if(el === 'down') answer[1] -= 1;
-        
+        // answer 절댓값이 board/2보다 클 경우 -> -면 -, +면 +
+        // 단 해당 el 반복문 끝나기 전에 실행되어야 함
+        // 4.5
         if(Math.abs(answer[0]) > board[0]/2) {
-            if(answer[0]>0) answer[0] = Math.floor(board[0]/2);
-            if(answer[0]<0) answer[0] = Math.ceil(-board[0]/2);
+            if(answer[0]>0) answer[0] = parseInt(board[0]/2);
+            if(answer[0]<0) answer[0] = parseInt(-board[0]/2);
         }
         
         if(Math.abs(answer[1]) > board[1]/2) {
-            if(answer[1]>0) answer[1] = Math.floor(board[1]/2);
-            if(answer[1]<0) answer[1] = Math.ceil(-board[1]/2);
+            if(answer[1]>0) answer[1] = parseInt(board[1]/2);
+            if(answer[1]<0) answer[1] = parseInt(-board[1]/2);
         }  
     }
-    // answer 절댓값이 board/2보다 클 경우 -> -면 -, +면 +
-
     return answer;
 }
