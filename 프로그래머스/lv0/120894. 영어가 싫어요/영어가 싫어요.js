@@ -1,15 +1,14 @@
 function solution(numbers) {
-    while(/[a-z]/g.test(numbers)){
-    numbers = numbers.replace('one', 1);
-    numbers = numbers.replace('two', 2);
-    numbers = numbers.replace('three', 3);
-    numbers = numbers.replace('four', 4);
-    numbers = numbers.replace('five', 5);
-    numbers = numbers.replace('six', 6);
-    numbers = numbers.replace('seven', 7);
-    numbers = numbers.replace('eight', 8);
-    numbers = numbers.replace('nine', 9);
-    numbers = numbers.replace('zero', 0);
-    }
+    numbers = numbers.replaceAll('one', 1);
+    numbers = numbers.replaceAll('two', 2);
+    numbers = numbers.replaceAll('three', 3);
+    numbers = numbers.replaceAll('four', 4);
+    numbers = numbers.replaceAll('five', 5);
+    numbers = numbers.replaceAll('six', 6);
+    numbers = numbers.replaceAll('seven', 7);
+    numbers = numbers.replaceAll('eight', 8);
+    numbers = numbers.replaceAll('nine', 9);
+    numbers = numbers.replaceAll('zero', 0);
+
     return Number(numbers);
 }
