@@ -20,7 +20,7 @@ function solution(polynomial) {
     // 상수항 0일 경우 상수항 지우기 -> x의 인덱스 파악 후 다음인덱스까지 slice
     let idx = answer.indexOf('x');
     if(answerArr[1] === 0) {answer = answer.slice(0, idx+1)};//"0x + 0" 또는 "0x"
-    
+    // x가 0 또는 1일 경우 그에 맞게 slice
     if(answerArr[0] === 0) {answer = answer.slice(5)}
     else if(answerArr[0] === 1) {answer = answer.slice(1)}
     
