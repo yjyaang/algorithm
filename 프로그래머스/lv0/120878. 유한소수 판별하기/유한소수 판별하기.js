@@ -1,5 +1,6 @@
 function solution(a, b) {
     // 기약분수 -> a, b모두 나머지 0 아닐 때까지 반복문으로 나누기
+    // 기존에 풀었던 '분수의 덧셈'에서 최대공약수 구해 기약분수 만들었던 식 활용
     let min = Math.min(a, b)
     let maxNum = 1;
     for(let i=0; i<= min; i++) {
