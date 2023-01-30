@@ -17,5 +17,7 @@ function solution(k, tangerine) {
             k -= newTan[i][1];
             i++;
         }
+        // i는 인덱스인데, 귤 종류 수와 같게 볼 수 있음
+        // while문에서 i에 1을 더한 상태로 끝나기 때문에, i를 리턴하면 귤 종류 수를 구할 수 있다.
         return i;
 }
